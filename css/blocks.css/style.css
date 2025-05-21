@@ -1,0 +1,93 @@
+header{
+    background-image: image-set(
+        url("./../../images/header.png") 1x,
+        url("./../../images/header@2x.png") 2x
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.header__container{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav__element{
+    font-family: "NunitoSans-SemiBold";
+    color: var(--additional-color);
+}
+
+.nav__button{
+    padding: 12px 24px;
+    height: 44px;
+}
+
+.header__title--registration{
+    color: var(--additional-color);
+    font-family: "ART_Bold";
+    font-size: 50px;
+    max-width: 1080px;
+}
+
+.header--registration{
+    padding: 416px 0 82px;
+}
+
+.header__title--registration{
+    align-items: start;
+}
+
+.header__button--registration{
+    background-color: var(--additional-color);
+    color: #1A3E3E;
+    font-family: "NunitoSans-Bold";
+    border: 1px solid var(--additional-color);
+    max-width: 213px;
+
+}
+
+.header__button--registration:hover{
+    color: var(--additional-color);
+    background-color: #1A3E3E;
+    border: 1px solid var(--additional-color);
+}
+
+.header--registration-flex{
+    display: flex;
+    gap: 24px;
+}
+
+.header__form{
+    display: flex;
+    flex-direction: column;
+    color: var(--additional-color);
+}
+
+.header__form input,.header__form select{
+    font-family: "NunitoSans-Bold";
+    border: 1px solid var(--additional-color);
+    border-radius: 10px;
+    text-align: start;
+    padding: 5px 10px 5px 10px;
+    width: 270px;
+    height: 52px;
+}
+
+
+.header__form label{
+    font-family: "NunitoSans-Regular";
+    font-size: 14px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

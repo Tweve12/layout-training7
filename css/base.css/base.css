@@ -1,0 +1,30 @@
+@import url("./reset.css");
+@import url("./../blocks.css/media.css");
+@import url("./../blocks.css/main.css");
+@import url("./../blocks.css/style.css");
+
+@font-face {
+    font-family: "ART_Bold";
+    src: url("./../../fonts/NEXT-ART_Bold.woff");
+}
+
+@font-face {
+    font-family: "NunitoSans-Bold";
+    src: url("./../../fonts/NunitoSans-Bold.woff");
+}
+@font-face {
+    font-family: "NunitoSans-ExtraBold";
+    src: url("./../../fonts/NunitoSans-ExtraBold.woff");
+}
+@font-face {
+    font-family: "NunitoSans-Light";
+    src: url("./../../fonts/NunitoSans-Light.woff");
+}
+@font-face {
+    font-family: "NunitoSans-Regular";
+    src: url("./../../fonts/NunitoSans-Regular.woff");
+}
+@font-face {
+    font-family: "NunitoSans-SemiBold";
+    src: url("./../../fonts/NunitoSans-SemiBold.woff");
+}

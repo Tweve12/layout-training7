@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РумТибет</title>
+    <link rel="stylesheet" href="./css/base.css/base.css">
+    <link rel="icon" href="./images/icon.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="header__nav">
+                <img src="./images/icon.svg" alt="icon" class="nav__element">
+                <div class="header__container">
+                    <a href="#" class="nav__element">Главная</a>
+                    <a href="#" class="nav__element">Про гида</a>
+                    <a href="#" class="nav__element">Программа тура</a>
+                    <a href="#" class="nav__element">Стоимость</a>
+                    <a href="#" class="nav__element">Блог</a>
+                    <a href="#" class="nav__element">Контакты</a>
+                    <button class="button nav__button">Консультация</button>
+                </div>
+            </nav>
+
+            <div class="header--registration">
+                <h1 class="header__title--registration">Насладись прогулкой в горах<br>
+                    с командой единомышленников</h1>
+                <div class="header--registration-flex">
+                    <form class="header__form">
+                        <select name="location" id="location-select">
+                            <option value="" disabled selected>Локация для тура</option>
+                            <option value="great-britain">Великобритания</option>
+                            <option value="russia">Россия</option>
+                            <option value="USA">США</option>
+                        </select>
+                        <label for="location-select">выберите из списка</label>
+                    </form>
+
+                    <form class="header__form">
+                        <input
+                            type="date"
+                            id="dateInput"
+                            name="trip-start"
+                            placeholder="Дата похода:"
+                            value="дд-мм-гггг"
+                            min="2025-04-01"
+                            max="2026-12-31" />
+                        <label for="dateInput">укажите диапазон</label>
+                    </form>
+
+                    <form class="header__form">
+                        <select name="people" id="people-select">
+                            <option value="" disabled selected>Участники</option>
+                            <option value="four">4</option>
+                            <option value="five">5</option>
+                            <option value="six">6</option>
+                        </select>
+                        <label for="people-select">минимум 4 человека</label>
+                    </form>
+
+                    <button class="header__button--registration">Найти программу</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="./script.js" defer></script>
+</body>
+</html>
