@@ -77,9 +77,19 @@ header{
     border: 1px solid var(--additional-color);
     border-radius: 10px;
     text-align: start;
-    padding: 5px 10px 5px 10px;
     width: 270px;
     height: 52px;
+    padding: 5px 10px 5px 10px;
+}
+
+.custom-select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("./../../images/arrow-down.svg ");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    cursor: pointer;
 }
 
 
