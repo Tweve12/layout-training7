@@ -38,7 +38,7 @@
 p{
     color: var(--accent-color);
     font-family: "NunitoSans-Regular";
-    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
 }
 
 .text--accent{
@@ -48,5 +48,5 @@ p{
 h3{
     color: var(--main-color);
     font-family: "NunitoSans-ExtraBold";
-    font-size: 32px;
+    font-size: clamp(24px, 2vw, 32px);
 }

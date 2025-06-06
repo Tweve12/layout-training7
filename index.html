@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header">
             <nav class="header__nav">
                 <img src="./images/icon.svg" alt="icon" class="nav__element">
                 <div class="header__container">
@@ -21,6 +21,38 @@
                     <a href="#" class="nav__element">Контакты</a>
                     <button class="nav__button button--standart">Консультация</button>
                 </div>
+                <button class="burger">
+                    <span class="burger-line burger-line--first"></span>
+                    <span class="burger-line burger-line--second"></span>
+                    <span class="burger-line burger-line--short"></span>
+                </button>
+                <nav class="burger__open burger__open--active">
+                    <li class="footer__list-element">
+                        <img src="./images/arrow-footer.svg" alt="" class="footer__img">
+                        <img src="./images/arrow-footer-hover.svg" alt="" class="img-hover">
+                        <a href="#" class="footer__link">Про гида</a>
+                    </li>
+                    <li class="footer__list-element">
+                        <img src="./images/arrow-footer.svg" alt="" class="footer__img">
+                        <img src="./images/arrow-footer-hover.svg" alt="" class="img-hover">
+                        <a href="#" class="footer__link">Программа тура</a>
+                    </li>
+                    <li class="footer__list-element">
+                        <img src="./images/arrow-footer.svg" alt="" class="footer__img">
+                        <img src="./images/arrow-footer-hover.svg" alt="" class="img-hover">
+                        <a href="#" class="footer__link">Стоимость</a>
+                    </li>
+                    <li class="footer__list-element">
+                        <img src="./images/arrow-footer.svg" alt="" class="footer__img">
+                        <img src="./images/arrow-footer-hover.svg" alt="" class="img-hover">
+                        <a href="#" class="footer__link">Блог</a>
+                    </li>
+                    <li class="footer__list-element">
+                        <img src="./images/arrow-footer.svg" alt="" class="footer__img">
+                        <img src="./images/arrow-footer-hover.svg" alt="" class="img-hover">
+                        <a href="#" class="footer__link">Контакты</a>
+                    </li>
+                </nav>
             </nav>
             <div class="header-registration">
                 <h1 class="header-registration__title">
@@ -78,14 +110,28 @@
                 <div class="show__images">
                     <img src="./images/show-pict--bc.png" srcset="./images/show-pict--bc.png 1x, ./images/show-pict--bc@2x.png 2x" alt="img-bc" class="show__img show__img--bc">
                     <div class="show__preview">
-                        <a href="https://youtu.be/EsX-0VBb0j0?si=LI6ozpPB-vINLosx" >
-                            <img src="./images/show-pict--front.png" srcset="./images/show-pict--front.png 1x, ./images/show-pict--front@2.png 2x" alt="img-front" class="show__img show__img--front">
-                            <button class="video-thumb__icon" data-fancybox="" data-src="https://youtu.be/WujKJpxaUHk" aria-label="Смотреть видео">
+                        <a class="video-preview">
+                            <img src="./images/show-pict--front.png" srcset="./images/show-pict--front.png 1x, ./images/show-pict--front@2x.png 2x" alt="img-front" class="show__img show__img--front">
+                            <button class="video-thumb__icon open-modal-btn" aria-label="Смотреть видео">
                                 <svg viewBox="0 0 24 24" class="video-thumb__play" aria-hidden="true">
                                 <path d="M8 5v14l11-7z" fill="currentColor" />
                                 </svg>
                             </button>
                         </a>
+                        <div class="modal" id="videoModal">
+                            <div class="modal-content">
+                                <button class="close-modal">&times;</button>
+                                <iframe
+                                    width="560"
+                                    height="315"
+                                    src="https://www.youtube.com/embed/WujKJpxaUHk?si=M0A_DgVFPQ6-GR8D?autoplay=1"
+                                    title="Видео"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="show__text">
@@ -143,9 +189,9 @@
                     <p>по версии отдыхающих</p>
                     <h3>Популярные направления</h3>
                 </div>
-                <div class="offer__cards">
+                <div class="offer__cards scroll-container--offer">
                     <!-- Карточка 1 -->
-                    <div class="offer__card">
+                    <div class="offer__card scroll-item--offer">
                         <img src="./images/bc-pict1.png"
                             srcset="./images/bc-pict1.png 1x, ./images/bc-pict1@2x.png 2x"
                             alt=""
@@ -170,7 +216,7 @@
                     </div>
 
                     <!-- Карточка 2 -->
-                    <div class="offer__card">
+                    <div class="offer__card  scroll-item--offer">
                         <img src="./images/bc-pict2.png"
                             srcset="./images/bc-pict2.png 1x, ./images/bc-pict2@2x.png 2x"
                             alt=""
@@ -195,7 +241,7 @@
                     </div>
 
                     <!-- Карточка 3 -->
-                    <div class="offer__card">
+                    <div class="offer__card  scroll-item--offer">
                         <img src="./images/bc-pict3.png"
                             srcset="./images/bc-pict3.png 1x, ./images/bc-pict3@2x.png 2x"
                             alt=""
@@ -228,8 +274,8 @@
                     <p>делимся впечатлениями</p>
                     <h3>Блог о путешествиях</h3>
                 </div>
-                <div class="blog__cards">
-                    <div class="blog__card">
+                <div class="blog__cards scroll-container">
+                    <div class="blog__card scroll-item">
                         <img src="./images/Rectangle 19.png" srcset="./images/Rectangle 19.png 1x ./images/Rectangle 19@2x.png 2x" alt="" class="blog__img">
                         <div class="blog__container-text">
                             <a href="#" class="blog__link">Красивая Италия, какая она в реальности?</a>
@@ -240,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog__card">
+                    <div class="blog__card scroll-item">
                         <img src="./images/Rectangle 19-2.png" srcset="./images/Rectangle 19-2.png 1x ./images/Rectangle 19@2x-2.png 2x" alt="" class="blog__img">
                         <div class="blog__container-text">
                             <a href="#" class="blog__link">Долой сомнения! Весь мир открыт для вас!</a>
@@ -251,7 +297,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog__card">
+                    <div class="blog__card scroll-item">
                         <img src="./images/Rectangle 19-1.png" srcset="./images/Rectangle 19-1.png 1x ./images/Rectangle 19@2x-1.png 2x" alt="" class="blog__img">
                         <div class="blog__container-text">
                             <a href="#" class="blog__link">Как подготовиться к путешествию в одиночку? </a>
@@ -262,7 +308,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog__card">
+                    <div class="blog__card scroll-item">
                         <img src="./images/Rectangle 19-3.png" srcset="./images/Rectangle 19-3.png 1x ./images/Rectangle 19@2x-3.png 2x" alt="" class="blog__img">
                         <div class="blog__container-text">
                             <a href="#" class="blog__link">Индия ... летим?</a>
@@ -283,25 +329,31 @@
                     <p>фото-отчет</p>
                     <h3>Делимся впечатлениями</h3>
                 </div>
-                <div class="gallery__images">
-                    <a href="./images/Rectangle 20.png" class="gallery__item--wide">
+                <div class="gallery__images scroll-container">
+                    <div class="gallery__item gallery__item--wide scroll-item" role="group" aria-label="1 / 6">
                         <img src="./images/Rectangle 20.png" srcset="./images/Rectangle 20.png 1x, ./images/Rectangle 20@2.png 2x" alt="" class="gallery__img">
-                    </a>
-                    <a href="./images/Rectangle 21.png">
+                        <button class="overlay"></button>
+                    </div>
+                    <div class="gallery__item scroll-item"role="group" aria-label="2 / 6">
                         <img src="./images/Rectangle 21.png" srcset="./images/Rectangle 21.png 1x, ./images/Rectangle 21@2.png 2x" alt="" class="gallery__img">
-                    </a>
-                    <a href="./images/Rectangle 22.png">
+                        <button class="overlay"></button>
+                    </div>
+                    <div class="gallery__item scroll-item"role="group" aria-label="3 / 6">
                         <img src="./images/Rectangle 22.png" srcset="./images/Rectangle 22.png 1x, ./images/Rectangle 22@2.png 2x" alt="" class="gallery__img">
-                    </a>
-                    <a href="./images/Rectangle 23.png">
+                        <button class="overlay"></button>
+                    </div>
+                    <div class="gallery__item scroll-item"role="group" aria-label="4 / 6">
                         <img src="./images/Rectangle 23.png" srcset="./images/Rectangle 23.png 1x, ./images/Rectangle 23@2.png 2x" alt="" class="gallery__img">
-                    </a>
-                    <a href="./images/Rectangle 24.png" class="gallery__item--wide">
+                        <button class="overlay"></button>
+                    </div>
+                    <div class="gallery__item gallery__item--wide scroll-item"role="group" aria-label="5 / 6">
                         <img src="./images/Rectangle 24.png" srcset="./images/Rectangle 24.png 1x, ./images/Rectangle 24@2.png 2x" alt="" class="gallery__img">
-                    </a>
-                    <a href="./images/Rectangle 25.png">
+                        <button class="overlay"></button>
+                    </div>
+                    <div class="gallery__item scroll-item"role="group" aria-label="6 / 6">
                         <img src="./images/Rectangle 25.png" srcset="./images/Rectangle 25.png 1x, ./images/Rectangle 25@2.png 2x" alt="" class="gallery__img">
-                    </a>
+                        <button class="overlay"></button>
+                    </div>
                 </div>
                 <button class="button--standart block__button--standart">Наш pinterest</button>
             </div>

@@ -41,3 +41,56 @@ document.addEventListener('click', (e) => {
     }
   });
 });
+
+
+document.querySelectorAll('.offer__card').forEach(card => {
+    card.addEventListener('click', () => {
+      // Если уже активна, отключаем
+      if (card.classList.contains('active')) {
+        card.classList.remove('active');
+      } else {
+        // Удаляем активность с других карточек (если нужно)
+        document.querySelectorAll('.offer__card.active').forEach(activeCard => {
+          activeCard.classList.remove('active');
+        });
+        // Активируем текущую
+        card.classList.add('active');
+        // Скроллим карточку к верху (необязательно)
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+  
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.burger__open');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');       // превращаем в крестик
+    menu.classList.toggle('active');         // показываем/скрываем меню
+  });
+
+
+
+    const modal = document.getElementById('videoModal');
+  const openBtn = document.querySelector('.open-modal-btn');
+  const closeBtn = document.querySelector('.close-modal');
+
+  openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    // Если хочешь остановить видео при закрытии:
+    const iframe = modal.querySelector('iframe');
+    iframe.src = iframe.src;
+  });
+
+  // Закрытие по клику вне окна
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      const iframe = modal.querySelector('iframe');
+      iframe.src = iframe.src;
+    }
+  });
